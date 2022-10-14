@@ -6,7 +6,6 @@ import {
   Html,
   RoundedBox,
   OrbitControls,
-  Trail,
 } from "@react-three/drei";
 import { useRef } from "react";
 
@@ -106,13 +105,6 @@ function ThreeScene() {
         radius={0.01}
         move
       />
-      <Text
-        characters='abcdefghijklmnopqrstuvwxyz0123456789'
-        position={[1, 1, 1]}
-        color={"blue"}
-      >
-        Hello World!
-      </Text>
       {/* Banner Explicativo */}
       <HtmlContent position={[-0.6, 0.3, 3]}>
         <div className='h-[600px] w-[1000px] flex items-center justify-center bg-white rounded-xl backdrop-blur-xl bg-opacity-50 px-5'>
