@@ -92,57 +92,61 @@ function HtmlContent({ position, classes, children }) {
 
 function ThreeScene() {
   return (
-    <Canvas camera={{ fov: 50 }}>
-      <Sky />
-      <OrbitControls enableZoom={false} />
-      <pointLight intensity={1} position={[-5, 5, -5]} />
-      <ambientLight intensity={0.5} />
-      <Bola position={[0, -2, -3]} color='green' />
-      <Bola position={[-2, 0, 1]} color='red' />
-      <Cubo
-        position={[2.3, -0.7, 1]}
-        size={[1, 1, 1]}
-        color='pink'
-        radius={0.01}
-        move
-      />
-      {/* Banner Explicativo */}
-      <HtmlContent position={[-0.6, 0.3, 3]}>
-        <div className='select-none h-[600px] w-[1000px] grid grid-rows-2 items-center justify-center bg-white rounded-xl backdrop-blur-xl bg-opacity-50 px-5'>
-          <div className='flex flex-col row-span-1 w-full h-full items-center justify-center'>
-            <p className='text-4xl'>
-              Hello,
-              <br />
-              <br /> in this section just some primitive shapes movin' around.
-              <br /> from drei.
-              <p>and this is a real HTML content as well</p>
-            </p>
-          </div>
-          <div className='flex flex-col row-span-1 w-full px-10 gap-10 h-full mt-10  items-center justify-center'>
-            <p className='text-3xl'>Social n' contact</p>
-            <div className='flex justify-center p-4 gap-5 rounded-full w-[200px] bg-white relative'>
-              <span className='hover:-translate-y-4 hover:scale-125 transition-all duration-300 ease-in-out'>
-                <SocialIcon url='https://www.linkedin.com/in/lucas-dias-a3808821b/' />
-              </span>
-              <span className='hover:-translate-y-4 hover:scale-125 transition-all duration-300 ease-in-out'>
-                <SocialIcon url='https://t.me/LuckCoder' />
-              </span>
+    <div className='h-screen'>
+      <Canvas className='h-full' camera={{ fov: 50 }}>
+        <Sky />
+        <OrbitControls enableZoom={false} />
+        <pointLight intensity={1} position={[-5, 5, -5]} />
+        <ambientLight intensity={0.5} />
+        <Bola position={[0, -2, -3]} color='green' />
+        <Bola position={[-2, 0, 1]} color='red' />
+        <Cubo
+          position={[2.3, -0.7, 1]}
+          size={[1, 1, 1]}
+          color='pink'
+          radius={0.01}
+          move
+        />
+        {/* Banner Explicativo */}
+        <HtmlContent position={[-0.3, 0.4, 3]}>
+          <div className='select-none h-[500px] w-[500px] md:h-[600px] md:w-[1000px] grid grid-rows-2 items-center justify-center bg-white rounded-xl backdrop-blur-xl bg-opacity-50 px-5'>
+            <div className='flex flex-col row-span-1 w-full h-full items-center justify-center'>
+              <p className='text-2xl md:text-4xl'>
+                Hello,
+                <br />
+                <br /> in this section just some primitive shapes movin' around.
+                <br /> from drei.
+              </p>
+              <p className='text-2xl md:text-4xl'>
+                This is a real HTML content as well
+              </p>
+            </div>
+            <div className='flex flex-col row-span-1 w-full px-10 gap-10 h-full mt-10  items-center justify-center'>
+              <p className='text-xl md:text-3xl'>Social n' contact</p>
+              <div className='flex justify-center p-4 gap-5 rounded-full md:w-[200px] bg-white relative'>
+                <span className='hover:-translate-y-4 hover:scale-125 transition-all duration-300 ease-in-out'>
+                  <SocialIcon url='https://www.linkedin.com/in/lucas-dias-a3808821b/' />
+                </span>
+                <span className='hover:-translate-y-4 hover:scale-125 transition-all duration-300 ease-in-out'>
+                  <SocialIcon url='https://t.me/LuckCoder' />
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-      </HtmlContent>
-      <Bola radius={1.4} position={[4, 3, -5]} color='black' />
-      <Movin />
+        </HtmlContent>
+        <Bola radius={1.4} position={[4, 3, -5]} color='black' />
+        <Movin />
 
-      {/* moving around shapes */}
-    </Canvas>
+        {/* moving around shapes */}
+      </Canvas>
+    </div>
   );
 }
 
 export default function Scene1() {
   return (
-    <section className='h-screen'>
+    <div className='min-h-full min-w-full '>
       <ThreeScene />
-    </section>
+    </div>
   );
 }

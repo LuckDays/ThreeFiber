@@ -3,11 +3,11 @@ import Scene1 from "../components/Scene1";
 
 export default function App() {
   return (
-    <>
+    <div className='flex flex-col p-0 m-0'>
       <Header />
-      <section className='min-h-screen'>
+      <section>
         <Scene1 />
       </section>
-    </>
+    </div>
   );
 }
