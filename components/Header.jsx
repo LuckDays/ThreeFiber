@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className='flex flex-col p-3 items-center justify-center'>
+    <div className='flex flex-col p-3 items-center justify-center' id='header'>
       <h1 className='text-4xl text-center w-full'>
         Welcome to my first project using Three.js in React
       </h1>
